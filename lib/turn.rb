@@ -26,13 +26,13 @@ def valid_move?(index)
   end
 end
 
-  
+
 # its my turn
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  if index.between?(0, 8)
+  if valid_move?(index)
     move(board, index)
   else
     turn(board)
