@@ -21,7 +21,7 @@ end
 # its my turn
 def turn(board)
   puts "Please enter 1-9:"
-  input = get.strip
+  input = gets.strip
   index = convert_input_to_index(input)
   if index.between?(0, 8)
     move(board, index)
