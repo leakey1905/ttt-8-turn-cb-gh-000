@@ -13,7 +13,7 @@ def move(board, index, value = "X")
   return board
 end
 
-def convert_input_to_index(input)
+def input_to_index(input)
   index = input.to_i - 1
   return index
 end
@@ -22,7 +22,7 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  index = convert_input_to_index(input)
+  index = input_to_index(input)
   if index.between?(0, 8)
     move(board, index)
   else
