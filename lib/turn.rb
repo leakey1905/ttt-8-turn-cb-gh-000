@@ -31,8 +31,8 @@ def position_taken?(board, index)
     return false
   elsif board[index] == "X" or board[index] == "O"
     return true
-
 end
+
 # its my turn
 def turn(board)
   puts "Please enter 1-9:"
