@@ -31,6 +31,7 @@ def position_taken?(board, index)
     return false
   elsif board[index] == "X" or board[index] == "O"
     return true
+  end
 end
 
 # its my turn
