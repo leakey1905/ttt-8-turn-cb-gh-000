@@ -14,7 +14,7 @@ def move(board, index, value = "X")
 end
 
 def convert_input_to_index(input)
-  index = input.to_i
+  index = input.to_i - 1
   return index
 end
 
@@ -24,6 +24,8 @@ def turn(board)
   input = get.strip
   index = convert_input_to_index(input)
   if index.between?(0, 8)
-    move(board, index, value)
-
+    move(board, index)
+  else
+    turn(board)
+  end
 end
