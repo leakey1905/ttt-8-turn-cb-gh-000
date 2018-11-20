@@ -18,6 +18,15 @@ def input_to_index(input)
   return index
 end
 
+def valid_move?(index)
+  if index.between(0, 8)
+    return true
+  else
+    return false
+  end
+end
+
+  
 # its my turn
 def turn(board)
   puts "Please enter 1-9:"
